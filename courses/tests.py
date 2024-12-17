@@ -93,33 +93,6 @@ class LessonTestCase(APITestCase):
         response = self.client.get(url)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
-# class CoursTestCase(APITestCase):
-
-    # def setUp(self):
-    #     self.user = User.objects.create(email='user22@sky.pro')
-    #     self.cours = Cours.objects.create(name='Основы языка Python', description='Азы программирования на Python')
-    #     self.client.force_authenticate(user=self.user)
-
-    # def test_create_cours(self):
-    #     '''тест на создание курса'''
-    #     self.client.force_authenticate(user=self.user)
-    #     url = reverse('courses:coursses-list')
-    #     data = {
-    #         'name': 'Мой первый курс',
-    #         'description': 'Самый первый курс'
-    #     }
-    #     response = self.client.post(url, data)
-    #
-    #     self.assertEqual(response.status_code, status.HTTP_201_CREATED)
-    #
-    # def test_update_cours(self):
-    #     '''тест на обновление курса'''
-    #     self.client.force_authenticate(user=self.user)
-    #     url = reverse('courses:coursses-detail', args=(self.cours.pk,))
-    #     data = {'name': 'Новая версия курса'}
-    #     response = self.client.patch(url, data)
-    #     self.assertEqual(response.status_code, status.HTTP_200_OK)
-
 
 class SubscriptionTestCase(APITestCase):
     def setUp(self):
